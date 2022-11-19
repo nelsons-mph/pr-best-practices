@@ -7,11 +7,11 @@
 
 # Automated Pull Request Template Usage
 
-It is advisable to have a standard PR template for each pull request with proper description and info about the PR. Github has the option to include standard PR templates so that it not required to type PR descriptions each and every time.  
+It is advisable to have a standard PR template for each pull request with proper description and info about the PR. Github has the option to include standard PR templates so that it is not required to type PR descriptions each and every time.  
 
 ## Pre-requisites
 1. Basic knowdledge of creating and working with MarkDown docs
-2. Basic knowledge of GitHub PR
+2. Basic knowledge of GitHub & PR
 3. An IDE with an appropriate exension to work on markdown files
 
 ## Steps to create an automated PR template
@@ -72,7 +72,7 @@ Delete if merged | **No**
 
 6. Place this file either in 
    - repository's root diectory [or]
-   - inside docs directiry (`docs/pull_request_template.md`) [or]
+   - inside docs directory (`docs/pull_request_template.md`) [or]
    - hide it inside .github directory (`.github/pull_request_template.md`)
  7. If you are adding this PR template in a feature branch, raise a PR to  the 'default` branch so that the template reflects for each PR that will raised going forward. You can directly add the PR template to the 'default' branch of the repo either by a commit or by adding the file directly in GitHub on the browser.
  8. There can be multiple PR templates for each environment such as the one below which I use for Prod code push. it is not necesasry to include everything but a more descrptive PR can serve as an all-in-one place for reference.
@@ -134,21 +134,22 @@ References:
  - Why to use? - Labels are cool, colorful but most importantly they act like indexes to filter our PRs easily.
  - How to use? - Create a new label from the `Labels` section when you raise a PR. Once created, this label will be available for the subsequent PRs.
    By default, GitHub will suggest labels but creating custom labels helps us much more. To create a label:
-     <br> - Type the label name and wait for GitHub to show the `Create new label "<label_name">
+     <br> - Type the label name and wait for GitHub to show the `Create new label <label_name>`
      <br> ![image](https://user-images.githubusercontent.com/62734192/201746627-884d097b-0802-43e6-8625-3408999a24cc.png)
-     <br> - Add a decription to the label and use common color codes for label. Use the Hex code option and do not use random colors. For example : dev (red) -> qa (yellow) -> prod (green)
+     <br> - Add a decription to the label and use common color codes for label. Use the Hex code option to use a single color code and do not use random colors. For example : dev (red) -> qa (yellow) -> prod (green)
      ![image](https://user-images.githubusercontent.com/62734192/201746857-2e0ed8a3-73f8-4f8d-8654-6da3c271261f.png)
      
  - Best practices:
    - Add User Story as labels
-   - Add common labels across repos like : `dev` , `qa`, `prod`, `reverse-merge` & follow same color code
+   - Add common labels across repos like : `dev` , `qa`, `prod`, `reverse-merge`
+   - Follow single color code for common projects, user stories
 <br>[Back Top &uarr;](#index)
 
 # Java Spring Boot API Code Review Checklist
 
 Review Cateogry             |           Review Item
 ----------------------------|--------------------------
-Clean Code                  | :heavy_check_mark: Leave a TODO whereever code needs to be added/modified & removed any other unwanted TODOs <br>:heavy_check_mark: Remove all TODOs while moving code from Dev to higher environments <br>:heavy_check_mark: Remove unorganized imports, unwanted comments
+Clean Code                  | :heavy_check_mark: Leave a TODO where ever code needs to be added/modified in future & remove any other unwanted TODOs <br>:heavy_check_mark: Remove all TODOs while moving code from Dev to higher environments <br>:heavy_check_mark: Remove unorganized imports, unwanted comments
 Coding                      | :heavy_check_mark: Make the controller thinner - make it thin so that each method only handles the request and returns the response. All other code logic should be moved to appropriate classes. <br>:heavy_check_mark: Reduce boilerplate code by making using of frameworks like [Lombok](https://projectlombok.org/features/GetterSetter)  <br>:heavy_check_mark: <b>DRY: Don’t Repeat Yourself</b> (Avoid Duplication) <i> Identify commonly used logic and extract them into re-usable functions</i> <br>:heavy_check_mark: <b>SRP : Single Responsibility Principle</b> (Do one Thing) <i>Make sure a function/method perform only one action - Limit the LOC for a function within 60</i> <br>:heavy_check_mark: Use Java Stream APIs and Lambda expressions to process collections of objects <br>:heavy_check_mark: Use Annotation based validation for bean/request validation <br>:heavy_check_mark: Use <b>'var'</b> keyword to declare new variables which improves readability
 Coding Standards/Formatting | :heavy_check_mark: Make sure source code follows the same code format <i>(This makes source code indented and formatted uniformly in all classes and <b>enhances readability</b> for the all developers & reviewers)</i> <br>:heavy_check_mark: Make sure all class members & variables are named as per the standard naming convention (camelCase). Use Solution/Problem Domain Names <br>:heavy_check_mark: Make class member & variable names descriptive. Try to avoid abbreviations in class/method/variable names <br>:heavy_check_mark: Use Intention-Revealing Names for functions <i>(names should begin with a verb)</i> <br>:heavy_check_mark: Agree upon the standard package naming and grouping scheme i.e. <i>reversed domain application name ex. com.pc.motherboard.gpu & package groups like model for bean files and so on.</i> 
 Coding Standards/Formatting | :heavy_check_mark: Avoid magic literals; use named constants (make sure constants follow the standard naming convention ie. <b>THIS_IS_A_CONSTANT</b> <br>:heavy_check_mark: Consider an enum or a class with static strings to define related constants/group of constants
@@ -158,7 +159,7 @@ Coding/Null handling        | :heavy_check_mark: Make sure null/empty comparison
 Commenting                  | :heavy_check_mark: Explain yourself in code (add proper comments)
 Documentation               | :heavy_check_mark: Consider including design artefacts OAS documents in the code check-in under `/docs`
 Input Validation            | :heavy_check_mark: Validate inputs (for valid data, size, range, boundary conditions, etc)Make use of validators, utility classes & [annotations](https://reflectoring.io/bean-validation-with-spring-boot/) & [custom annotations](https://blog.clairvoyantsoft.com/spring-boot-creating-a-custom-annotation-for-validation-edafbf9a97a4)
-Logging                     | :heavy_check_mark: Make use of logging statements instead of SOPs & avoid logging sensitive data. Nit : Using `@Slf4j` from Lombok is preferred
+Logging                     | :heavy_check_mark: Make use of logging statements instead of SOPs & avoid logging sensitive data. Nit : Using `@Slf4j` from Lombok is preferred.
 
 ##### Code Review best practices references:
 
@@ -198,7 +199,7 @@ Microsite/Controls Module       |   `{GEAR-ID}-{LOB:optional}-{APP-NAME}-control
     <br> Including the date in the branch name will help us to identify since when the feature is branched out.
     <br> `Feature-reverseMerge-dev-{mmddyy:optional}`
     <br> `Feature-patch-dev-{mmddyy:optional}`
- 3. Work on the `feature` branch for the changes. Raise a PR from `feature to dev`. If one or more developers are working on different features, it is always advised to sync the changes with each other.
+ 3. Work on the `feature` branch for the changes. Raise a PR from `feature to dev`. If one or more developers are working on different features, it is always advised to sync the changes with each other. This syncing is done by reverse merging the changes from dev into the developers' own feature branches
  4. Once PR is raised, get it reviewed and merged to dev.
  5. Raise PR from `dev to qa` post successful dev deployment.
  ![image](https://user-images.githubusercontent.com/62734192/201771742-64612840-5ca2-4eeb-bf63-2f1cfebfbbd4.png)

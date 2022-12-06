@@ -1,7 +1,6 @@
 # Index
 [Automated Pull Request Template Usage](#automated-pull-request-template-usage)
 <br>[Best Practices for PR](#best-practices-for-pr)
-<br>[Java Spring Boot API Code Review Checklist](#java-spring-boot-api-code-review-checklist)
 <br>[Git Repo Naming Conventions](#git-repo-naming-conventions)
 <br>[Git PR Code Flow](#git-pr-code-flow)
 
@@ -144,35 +143,6 @@ References:
    - Add common labels across repos like : `dev` , `qa`, `prod`, `reverse-merge`
    - Follow single color code for common projects, user stories
 <br>[Back Top &uarr;](#index)
-
-# Java Spring Boot API Code Review Checklist
-
-Review Cateogry             |           Review Item
-----------------------------|--------------------------
-Clean Code                  | :heavy_check_mark: Leave a TODO where ever code needs to be added/modified in future & remove any other unwanted TODOs <br>:heavy_check_mark: Remove all TODOs while moving code from Dev to higher environments <br>:heavy_check_mark: Remove unorganized imports, unwanted comments
-Coding                      | :heavy_check_mark: Make the controller thinner - make it thin so that each method only handles the request and returns the response. All other code logic should be moved to appropriate classes. <br>:heavy_check_mark: Reduce boilerplate code by making using of frameworks like [Lombok](https://projectlombok.org/features/GetterSetter)  <br>:heavy_check_mark: <b>DRY: Don’t Repeat Yourself</b> (Avoid Duplication) <i> Identify commonly used logic and extract them into re-usable functions</i> <br>:heavy_check_mark: <b>SRP : Single Responsibility Principle</b> (Do one Thing) <i>Make sure a function/method perform only one action - Limit the LOC for a function within 60</i> <br>:heavy_check_mark: Use Java Stream APIs and Lambda expressions to process collections of objects <br>:heavy_check_mark: Use Annotation based validation for bean/request validation <br>:heavy_check_mark: Use <b>'var'</b> keyword to declare new variables which improves readability
-Coding Standards/Formatting | :heavy_check_mark: Make sure source code follows the same code format <i>(This makes source code indented and formatted uniformly in all classes and <b>enhances readability</b> for the all developers & reviewers)</i> <br>:heavy_check_mark: Make sure all class members & variables are named as per the standard naming convention (camelCase). Use Solution/Problem Domain Names <br>:heavy_check_mark: Make class member & variable names descriptive. Try to avoid abbreviations in class/method/variable names <br>:heavy_check_mark: Use Intention-Revealing Names for functions <i>(names should begin with a verb)</i> <br>:heavy_check_mark: Agree upon the standard package naming and grouping scheme i.e. <i>reversed domain application name ex. com.pc.motherboard.gpu & package groups like model for bean files and so on.</i> 
-Coding Standards/Formatting | :heavy_check_mark: Avoid magic literals; use named constants (make sure constants follow the standard naming convention ie. <b>THIS_IS_A_CONSTANT</b> <br>:heavy_check_mark: Consider an enum or a class with static strings to define related constants/group of constants
-Coding/Exception Handling   | :heavy_check_mark: Proper Exception Handling <i>(Do not just re-throw exceptions - log them properly)</i>
-Coding/Methods              | :heavy_check_mark: Return empty arrays or collections, not nulls. <i>Null returns will enforce additional null checks at multiple locations making the code more prone to null pointer exceptions</i>
-Coding/Null handling        | :heavy_check_mark: Make sure null/empty comparisons are null-safe <i>(use null-safe comparison methods or ensure that null is on the left side of the comparison operator)</i> <br>:heavy_check_mark: Make use of Optionals where the values are prone to be null <br>:heavy_check_mark: Prefer equals in place of `==` for object comparison <br>:heavy_check_mark: When comparing, ensure the object under comparison is always on the right hand side to avoid NPE i.e. `"CONSTANT".equalsIgnoreCase("StringUnderComparison")` instead of `"StringUnderComparison".equalsIgnoreCase("CONSTANT")`
-Commenting                  | :heavy_check_mark: Explain yourself in code (add proper comments)
-Documentation               | :heavy_check_mark: Consider including design artefacts OAS documents in the code check-in under `/docs`
-Input Validation            | :heavy_check_mark: Validate inputs (for valid data, size, range, boundary conditions, etc)Make use of validators, utility classes & [annotations](https://reflectoring.io/bean-validation-with-spring-boot/) & [custom annotations](https://blog.clairvoyantsoft.com/spring-boot-creating-a-custom-annotation-for-validation-edafbf9a97a4)
-Logging                     | :heavy_check_mark: Make use of logging statements instead of SOPs & avoid logging sensitive data. Nit : Using `@Slf4j` from Lombok is preferred.
-
-##### Code Review best practices references:
-
-##### Reference Links:
-<li> https://dev.to/smartyansh/code-review-checklist-for-java-beginners-181f 
-<li> https://www.romexsoft.com/blog/improve-java-code-quality/
-<li> https://dzone.com/articles/java-code-review-checklist 
-<li> https://www.win.tue.nl/~wstomv/edu/sc-hse/downloads/Series_01/checklist.pdf 
-<li> http://www.cs.toronto.edu/~sme/CSC444F/handouts/java_checklist.pdf 
-
-##### Recommended Reading:	
-    Effective Java by Joshua Bloch
-[Back Top &uarr;](#index)
 
 # Git Repo Naming Conventions
 

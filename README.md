@@ -3,6 +3,7 @@
 <br>[Best Practices for PR](#best-practices-for-pr)
 <br>[Git Repo Naming Conventions](#git-repo-naming-conventions)
 <br>[Git PR Code Flow](#git-pr-code-flow)
+<br>[Git Repo Directory Structure](#git-repo-directory-structure)
 
 # Automated Pull Request Template Usage
 
@@ -218,4 +219,14 @@ Template repositories with an automation template that includes:
  <li> 4. Review settings
  <li> 5. Team settings
   
+[Back Top &uarr;](#index)
+  
+# Git Repo Directory Structure
+
+Simple REST API Service
+ Root
+  |-- appli
+  |
+  |
+  |
 [Back Top &uarr;](#index)

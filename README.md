@@ -178,15 +178,15 @@ Logging                     | :heavy_check_mark: Make use of logging statements 
 
 Type of Repo        |   Naming Convention	                              |       Examples
 --------------------|-----------------------------------------------------|---------------------------------
-Microservice/API    |   `{GEAR-ID}-{LOB:optional}-{APP-NAME}-REST-service` <br> `{GEAR-ID}-{LOB:optional}-{APP-NAME}-rest-service`  |   6091-investor-profiles-rest-service <br> 6091-rs-investor-profiles-REST-service[^1]
-Microservice/API Flavour : Orchestration Flavour    |   `{GEAR-ID}-{LOB:optional}-{APP-NAME}-rest-service`  <br> `{GEAR-ID}-{LOB:optional}-{APP-NAME}-orchestration-rest-service` <br> `{GEAR-ID}-{LOB:optional}-{APP-NAME}-orchestrator-rest-service`  |   6091-rs-investor-profiles-orchestrator-rest-service
-Microservice/API Flavour : Data Flavour | `{GEAR-ID}-{LOB:optional}-{APP-NAME}-data-rest-service` |  6091-rs-investor-profiles-data-rest-service
-Microservice/API Flavour : Batch        |  `{GEAR-ID}-{LOB:optional}-{APP-NAME}-batch` | 6091-rs-investor-profiles-batch
-Microservice/API Flavour : Listener     |   `{GEAR-ID}-{LOB:optional}-{APP-NAME}-listener` <br>`{GEAR-ID}-{LOB:optional}-{APP-NAME}-listener-service` | 6091-rs-investor-profiles-listener
-Microservice/API Flavour : Shared Library   | `{GEAR-ID}-{LOB:optional}-{APP-GROUP:optional}-shared-lib` | 6091-rs-investor-profiles-shared-lib
-Microservice/API Flavour : Build Orchestration[^2]  |   `{GEAR-ID}-{LOB:optional}-{APP-GROUP}-orchestration` | 6091-rs-investor-profiles-orchestration
-Microsite       |   `{GEAR-ID}-{LOB:optional}-{APP-NAME}-site`  |   6091-rs-investor-profiles-site
-Microsite/Controls Module       |   `{GEAR-ID}-{LOB:optional}-{APP-NAME}-controls-module`  |   6091-rs-investor-profiles-control-module
+Microservice/API    |   `{APP-NAME}-REST-service` <br> `{APP-NAME}-rest-service`  |   investor-profiles-rest-service <br> rs-investor-profiles-REST-service[^1]
+Microservice/API Flavour : Orchestration Flavour    |   `{APP-NAME}-rest-service`  <br> `{APP-NAME}-orchestration-rest-service` <br> `{APP-NAME}-orchestrator-rest-service`  |   rs-investor-profiles-orchestrator-rest-service
+Microservice/API Flavour : Data Flavour | `{APP-NAME}-data-rest-service` |  rs-investor-profiles-data-rest-service
+Microservice/API Flavour : Batch        |  `{APP-NAME}-batch` | rs-investor-profiles-batch
+Microservice/API Flavour : Listener     |   `{APP-NAME}-listener` <br>`{APP-NAME}-listener-service` | rs-investor-profiles-listener
+Microservice/API Flavour : Shared Library   | `{APP-GROUP:optional}-shared-lib` | rs-investor-profiles-shared-lib
+Microservice/API Flavour : Build Orchestration[^2]  |   `{APP-GROUP}-orchestration` | rs-investor-profiles-orchestration
+Microsite       |   `{APP-NAME}-site`  |  rs-investor-profiles-site
+Microsite/Controls Module       |   `{APP-NAME}-controls-module`  |  rs-investor-profiles-control-module
 
 [^1]: `REST` and `rest` terms can be interchanged
 [^2]: This is the build orchestration repo that handles the orchestration of app deployments not to be confused with orchestration flavour

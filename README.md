@@ -224,6 +224,6 @@ Template repositories with an automation template that includes:
 # Git Repo Directory Structure
 
 Simple REST API Service
-![image](https://user-images.githubusercontent.com/111540956/205819647-defbe49f-0904-4992-b43e-77ed1519ab0f.png)
+![image](https://user-images.githubusercontent.com/111540956/206884096-7c7db902-a97d-49f4-a0d9-3df24bebd9ed.png)
 
 [Back Top &uarr;](#index)

@@ -73,8 +73,10 @@ Delete if merged | **No**
    - repository's root diectory [or]
    - inside docs directory (`docs/pull_request_template.md`) [or]
    - hide it inside .github directory (`.github/pull_request_template.md`)
+
  7. If you are adding this PR template in a feature branch, raise a PR to  the 'default` branch so that the template reflects for each PR that will raised going forward. You can directly add the PR template to the 'default' branch of the repo either by a commit or by adding the file directly in GitHub on the browser.
- 8. There can be multiple PR templates for each environment such as the one below which I use for Prod code push. it is not necesasry to include everything but a more descrptive PR can serve as an all-in-one place for reference.
+ 
+ 8. There can be multiple PR templates for each environment such as the one below which I use for Prod code push. it is not necessary to include everything but a more descriptive PR can serve as an all-in-one place for reference.
  ```
  > #### PR Details:
 Purpose  | Prod Deployment (integration to master merge)
@@ -118,29 +120,29 @@ References:
 
 # Best Practices for PR
 1. Give a proper commit message label that is self-descriptive of the code change/commit
-2. Advisable to include a detailed message of the the commit - code change details make use of PR templates, JIRA story references
-3. Include Design Artifacts (Design Documents, OAS, Postman collections etc) for a code review. Either attach them to the PR or provide links/references to the documents.
+2. Advisable to include a detailed message of the commit - code change details make use of PR templates, JIRA story references
+3. Include Design Artifacts (Design Documents, OAS, Postman collections, etc) for a code review. Either attach them to the PR or provide links/references to the documents.
 4. Add Reviewer(s)
 5. Add Assignees or add yourself
 6. Add labels [see Using Labels Section below](#using-labels)
 ![image](https://user-images.githubusercontent.com/62734192/201747465-26e3e054-5be5-4169-8063-b42a69529c8f.png)
 
 <br> Nit : 
- - Update `README.MD` with Project information so that it serves as AIO document for the service.
+ - Update `README.MD` with Project information so that it serves as an All-In-One document for the service.
  - Add Gitmojis to code commit labels to make them look uber cool ;)
 
 # Using Labels
- - Why to use? - Labels are cool, colorful but most importantly they act like indexes to filter our PRs easily.
+ - Why to use? - Labels are cool, and colorful but most importantly they act like indexes to filter our PRs easily.
  - How to use? - Create a new label from the `Labels` section when you raise a PR. Once created, this label will be available for the subsequent PRs.
    By default, GitHub will suggest labels but creating custom labels helps us much more. To create a label:
      <br> - Type the label name and wait for GitHub to show the `Create new label <label_name>`
      <br> ![image](https://user-images.githubusercontent.com/62734192/201746627-884d097b-0802-43e6-8625-3408999a24cc.png)
-     <br> - Add a decription to the label and use common color codes for label. Use the Hex code option to use a single color code and do not use random colors. For example : dev (red) -> qa (yellow) -> prod (green)
+     <br> - Add a description to the label and use common color codes for the label. Use the Hex code option to use a single color code and do not use random colors. For example: dev (red) -> qa (yellow) -> prod (green)
      ![image](https://user-images.githubusercontent.com/62734192/201746857-2e0ed8a3-73f8-4f8d-8654-6da3c271261f.png)
      
  - Best practices:
    - Add User Story as labels
-   - Add common labels across repos like : `dev` , `qa`, `prod`, `reverse-merge`
+   - Add common labels across repos like: `dev`, `qa`, `prod`, `reverse-merge`
    - Follow single color code for common projects, user stories
 <br>[Back Top &uarr;](#index)
 
@@ -159,17 +161,17 @@ Microsite       |   `{APP-NAME}-site`  |  rs-investor-profiles-site
 Microsite/Controls Module       |   `{APP-NAME}-controls-module`  |  rs-investor-profiles-control-module
 
 [^1]: `REST` and `rest` terms can be interchanged
-[^2]: This is the build orchestration repo that handles the orchestration of app deployments not to be confused with orchestration flavour
+[^2]: This is the build orchestration repo that handles the orchestration of app deployments not to be confused with orchestration flavor
 
  
 # Git PR Code Flow
- 1. Create feature branch from `dev`
+ 1. Create a feature branch from `dev`
  2. Feature branch naming conventions
     <br> `Feature-{UserStoryRef}-{FeatureDescription}-{mmddyy:optional}` <br> Ex: <i>Feature-USRSTRY04-copyPlans</i> or <i>Feature-USRSTRY04-copyPlans-111422</i>
-    <br> Including the date in the branch name will help us to identify since when the feature is branched out.
+    <br> Including the date in the branch name will help us to identify when the feature is branched out.
     <br> `Feature-reverseMerge-dev-{mmddyy:optional}`
     <br> `Feature-patch-dev-{mmddyy:optional}`
- 3. Work on the `feature` branch for the changes. Raise a PR from `feature to dev`. If one or more developers are working on different features, it is always advised to sync the changes with each other. This syncing is done by reverse merging the changes from dev into the developers' own feature branches
+ 3. Work on the `feature` branch for the changes. Raise a PR from `feature to dev`. If one or more developers are working on different features, it is always advised to sync the changes with each other. This syncing is done by reverse merging the changes from the dev into the developers' feature branches
  4. Once PR is raised, get it reviewed and merged to dev.
  5. Raise PR from `dev to qa` post successful dev deployment.
  ![image](https://user-images.githubusercontent.com/62734192/201771742-64612840-5ca2-4eeb-bf63-2f1cfebfbbd4.png)
@@ -178,7 +180,7 @@ Microsite/Controls Module       |   `{APP-NAME}-controls-module`  |  rs-investor
 <details> 
 <summary> Branch naming conventions recommended by GitHub  </summary>
 <br>
-Well there aren't any conventions specified by Git and GitHub, it is always good to follow some rules and conventions to create a new branch, its flow etc. In general, Git branches fall into two different categories:
+Well, there aren't any conventions specified by Git and GitHub, it is always good to follow some rules and conventions to create a new branch, its flow etc. In general, Git branches fall into two different categories:
         1. Regular/Evergreen branches
         2. Temporary branches
 
@@ -186,7 +188,7 @@ Well there aren't any conventions specified by Git and GitHub, it is always good
 <b> Regular Git branches </b>
 
 <br>
-These branches will be available in your repository on permanent bases. Their naming convention is simple and straightforward.
+These branches will be available in your repository on a permanent basis. Their naming convention is straightforward.
 
 <br>
 <li> Development (dev) is the main development branch. The dev branch’s idea is to make changes in it and restrict the developers from making any changes in the master branch directly. Changes in the dev branch undergo reviews and, after testing, get merged with the master branch.
@@ -195,7 +197,7 @@ These branches will be available in your repository on permanent bases. Their na
 <li> Main (main, yes main and not <strike> master</strike>)  is the default branch available in the Git repository. It should be stable all the time and won’t allow any direct check-in. You can only merge it after code review. All team members are responsible for keeping this stable and up-to-date.
 
 
-<li> QA (QA), or test branch, contains all the code for QA testing and automation testing of all changes implemented. Before any change goes to the production environment, it must undergo the QA testing to get a stable codebase.
+<li> QA (QA), or test branch, contains all the code for QA testing and automation testing of all changes implemented. Before any change goes to the production environment, it must undergo QA testing to get a stable codebase.
 <br>
 
 <br>
